@@ -11,7 +11,7 @@ const router = express.Router()
 
 router.get('/', getAll)
 
-router.get('/read/:id', getOne)
+router.get('/:id', getOne)
 
 router.post('/',create )
 
