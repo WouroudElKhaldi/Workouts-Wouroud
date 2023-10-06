@@ -58,8 +58,8 @@ const WorkoutDetails = ({ workout }) => {
           <h4>{workout.title}</h4>
           <p><strong>Load (kg): </strong>{workoutData.load}</p>
           <p><strong>Number of reps: </strong>{workoutData.reps}</p>
-          <p><strong>Created at: </strong>{workoutData.createdAt}</p>
-          <p><strong>Updated at: </strong>{formatDistanceToNow( new Date(workout.createdAt), {addSuffix: true})}</p>
+          <p><strong>Created  </strong>{formatDistanceToNow( new Date(workout.createdAt), {addSuffix: true})}</p>
+          <p><strong>Updated  </strong>{formatDistanceToNow( new Date(workout.updatedAt), {addSuffix: true})}</p>
           <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
           <button onClick={toggleUpdateForm}>Update</button> 
         </>

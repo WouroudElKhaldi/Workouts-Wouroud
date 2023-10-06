@@ -37,7 +37,7 @@ export const UpdateWorkoutForm = ({ workoutId , onUpdateComplete}) => {
     };
 
     fetchWorkoutData();
-  }, [workoutId]);
+  }, [load, reps, title, workoutId]);
 
   const handleChange = (e) => {
     setFormData({
