@@ -15,7 +15,6 @@ export const UpdateWorkoutForm = ({ workoutId , onUpdateComplete}) => {
   useEffect(() => {
     const fetchWorkoutData = async () => {
       try {
-        const workout = {title, load , reps}
         const response = await fetch(`/workout/${workoutId}`);
         console.log("URL:", `/workout/${workoutId}`); 
         if (response.ok) {
