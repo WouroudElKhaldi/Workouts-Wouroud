@@ -2,7 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const routes = require('./router/routes')
 const userRoutes = require('./router/user')
-
+const Logging = require('./middleware/Logging.js')
+const morgan = require('morgan')
+const customMorgan  = require('./middleware/morgan.js')
 
 require('dotenv').config()
 const port = process.env.PORT
@@ -11,6 +13,11 @@ const url = process.env.URL
 const app = express();
 
 app.use(express.json())
+app.use(Logging)
+// morgan.token('customFormat', customMorgan);
+// app.use(morgan(':customFormat'));
+app.use(morgan)
+
 
 //connecting to db
 mongoose.connect(url , {
